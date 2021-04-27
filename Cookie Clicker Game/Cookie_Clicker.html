@@ -1,6 +1,20 @@
 <script>
+    function update() { 
+    document.getElementById('text').value = cookieCount;
+    document.title = cookiecount + "cookies";
+    document.getElementById('ammountAutoClick').innerHTML = "You On " + autoClick + "Auto Clickers";
+    document.getElementById('costAutoClick' ).innerHTML = ((autoClick+1) * 12) + " cookies"; 
+    }
+    
     var cookieCount =0;
+    var = autoclick = 0;
+    function update() {
+        cookiecount = cookiecount + autoclick; 
+        update()
+    }
+    setinterval(timer,1000)
 </script>
+Cookies
 <html>  
 <head>
     <title>Cookies Clicker The Ultimate Game </title>    
@@ -14,8 +28,7 @@ You got:
 function add(){
 
     cookieCount= cookieCount +1 
-    document.getElementById('text').value = cookieCount;
-
+    Update()
 }
 
 </script>
@@ -27,20 +40,35 @@ Cookies
 </button>
 <button>
 <a href="#" onclick="load()">Load</a>
-</button>
+<br><br> 
+    
+<p>Buy 1 Auto Clicker</p>
+    <button><a href="#" onclick="BuyAutoClick()"><img src=mouse-hover.png width="30px" height="40px"></a></button>
+    <p id="costAutoClick">12 Cookies<p>
+    <p id="ammountAutoClick'> You Own 0 Auto Clickers </p>
+            
 <Script>
 function save(){
     localStorage.setItem("cookieCount", cookieCount);
-
+    localStorage.setItem("autoClick" , autoClick);
 
 }
 function load(){
     cookieCount=localStorage.getItem("cookieCount")
     cookieCount= parseInt(cookieCount)
-    document.getElementById('text').value=cookieCount;
-
+    autoClick = localStorage.getItem("autoClick"); 
+    autoClick= parseInt(autoClick);                                            
+    update()
 }
 
+function BuyAutoClick() {
+    if (cookie >= ((autoClick+1) * 12)) { 
+        cookiecount = coookiecount - ((autoClick+1) * 12);
+        autoClick = autoClick + 1;                                          
+        update()
+    }                                          
+} 
+                                                  
 </Script>
 
 </Body>
