@@ -1,0 +1,39 @@
+<html>
+<head>
+    <title>The best game ever</title>
+</head>
+<body>
+    <script type="text/javascript" src="https://static.codehs.com/gulp/a3f0604b94529c234bf58466f94e4011c4ef969a/chs-js-lib/chs.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+var hp=0
+var monsterhp=0
+var gold = 0
+var attack=1
+var speed = 1
+function hit(){
+    var damage = attack 
+    monsterhp= monsterhp - damage
+}
+    </script>
+    <a href=# onclick="hit()"><img src="mon"></a>
+</body>
+
+<body>
+    <script>
+        function upgrade(){
+            attack= attack +1
+            gold= gold - 100 * attack 
+        }
+    </script>
+    <table style="width:100%">
+        <tr>    <th>Item</th>           <th>Attack Value</th>   <th>upgrade</th>    </tr>
+        <tr>    <th>Iron sword</th>     <th>1</th>              <th><a href="upgrade()">Weapon level + 1</a></th>    </tr>
+    
+
+
+    </table>
+</body>
+
+
+</html>
